@@ -6,7 +6,6 @@ public class MoveEnemy : MonoBehaviour
     public Transform pointB;
     public float speed = 10f;
     private bool collision = false;
-
     IEnumerator Start()
     {
         while (true)
@@ -15,7 +14,6 @@ public class MoveEnemy : MonoBehaviour
             do yield return null; while (MoveTowards(pointB));
         }
     }
-
     bool MoveTowards(Transform target)
     {
         transform.position = Vector3.MoveTowards(
